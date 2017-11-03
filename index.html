@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resume</title>
+    <link rel="stylesheet" href="./dist/css/spectre.min.css">
+    <link rel="stylesheet" href="./dist/css/spectre-exp.min.css">
+    <link rel="stylesheet" href="./dist/css/spectre-icons.min.css">
+    <style>
+      @font-face {
+
+        font-family: 'Roboto-Thin' ;
+        src: url('./dist/fonts/Roboto-Thin.ttf') format('truetype');
+
+      }
+      body {
+        font-size: 65%;
+        font-family: "Roboto Mono";
+        color: #000000;
+      }
+      div {
+        margin: 10px 0px;
+      }
+      h1 {
+        font-family: 'Roboto-Thin';
+        font-size: 400%;
+      }
+      .step .step-item:not(:first-child)::before {
+        background: #001433;
+      }
+      .step .step-item a::before {
+        background: #001433;
+      }
+      .step .step-item.active a::before {
+        border: .1rem solid #cc5500;
+      }
+      .tooltip::after {
+        opacity: 1;
+        transform: translate(-50%, -.2rem);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container grid-md">
+      <div class="columns">
+      <!-- Resume -->
+        <div>
+
+          <div class="column col-6 col-mx-auto">
+            <h1 align="center">GARY LOAYZA</h1>
+          </div>
+      <!-- Career Objective -->
+          <div class="column col-12 col-mx-auto">
+            <p style="padding:10px 0px 35px" align="center">
+
+              I'm a graduate of UT at Austin, with a Bachelor of Science in
+              Physics. In the few years after earning my degree, I learned
+              Javascript and other technologies surrounding the world of front
+              end development in an effort to push my career in the direction
+              of computer science.
+
+            </p>
+          </div>
+      <!-- /Career Objective -->
+      <!-- Education Line -->
+          <div>
+            <ul class="step">
+            <li class="step-item">
+              <a href="#">
+              </a>
+            </li>
+            <li class="step-item">
+              <a href="#" class="tooltip" data-tooltip="2006-2010">
+                <img src="./dist/images/mrhs.png" height="45" width="50">
+                <p style="color: #001433">Morton Ranch HS</p>
+              </a>
+            </li>
+            <li class="step-item">
+              <a href="#" class="tooltip" data-tooltip="2010-2012">
+                <img src="./dist/images/sfa.png" height="45" width="45">
+                <p style="margin: 0px;color: #001433">Stephen F. Austin</p>
+                <p style="margin: 0px;color: #001433">State University</p>
+              </a>
+            </li>
+            <li class="step-item">
+              <a href="#" class="tooltip" data-tooltip="2012-2015">
+                <img src="./dist/images/UT.png" height="50" width="45">
+                <p style="margin: 0px;color: #001433">University of Texas</p>
+                <p style="margin: 0px;color: #001433">at Austin</p>
+              </a>
+            </li>
+            <li class="step-item active">
+              <a href="#">
+              </a>
+            </li>
+            </ul>
+          </div>
+      <!-- /Education Line  -->
+          <div class="columns col-oneline">
+      <!-- Work Experience -->
+            <div class="column col-4" style="margin: 10px 0px 0px 75px;
+                                             padding: 30px 0px 25px">
+              <div style="padding: 0px 0px 0px 10px;
+                          border-radius: 50px 40px 40px 10px;
+                          background: #cc5500">
+                <h5 style="background: #001433;
+                          color: #ffffff;
+                          border-radius: 10px;
+                          padding-left: 20px">
+                    Work Experience
+                </h5>
+              </div>
+              <div>
+                <p style="margin: 2px 2px 2px 2px;">
+                  <b>Teacher's Aide [</b>
+                  <span style="font-size: 10pt;color: #454d5d">
+                  Nov 2016-May 2017
+                  </span>
+                  <b>]</b>
+                </p>
+                <p style="margin: 2px 2px 2px 2px;">
+                  Katy ISD, Katy-Texas
+                </p>
+                <p style="margin: 10px 2px 2px 2px;">
+                  <b>Hardware Tech. [</b>
+                  <span style="font-size: 10pt;color: #454d5d">
+                    Jan 2017-Apr 2017
+                  </span>
+                  <b>]</b>
+                </p>
+                <p style="margin: 2px 2px 2px 2px;">
+                  Revive Bytes, Katy-Texas
+                </p>
+                <p style="margin: 10px 2px 2px 2px;">
+                  <b>Sales Rep. [</b>
+                  <span style="font-size: 10pt;color: #454d5d">
+                    Apr 2017-Present
+                  </span>
+                  <b>]</b>
+                </p>
+                <p style="margin: 2px 2px 2px 2px;">
+                  Paint-A-Part, Houston-Texas
+                </p>
+              </div>
+            </div>
+    <!-- /Work Experience -->
+    <!-- Personal Info -->
+            <div class="column col-5 col-mx-auto" style="padding: 30px 30px 25px">
+              <div style="padding: 0px 0px 0px 10px;
+                          border-radius: 50px 40px 40px 10px;
+                          background: #cc5500">
+                <h5 style="background: #001433;
+                          color: #ffffff;
+                          border-radius: 10px;
+                          padding-left: 20px">
+                  Personal Info
+                </h5>
+              </div>
+              <div>
+                <div class="columns col-gapless col-oneline" style="padding:
+                  2px 0px 0px">
+                  <h6 class="col-3"><b>Phone</b></h6>
+                  <p class="col-1">:</p>
+                  <p class="col-7">
+                    +1 (281) 610-0421
+                  </p>
+                </div>
+                <div class="columns col-gapless col-oneline" style="padding:
+                  2px 0px 0px">
+                  <h6 class="col-3"><b>Email</b></h6>
+                  <p class="col-1">:</p>
+                  <p class="col-7">
+                    loayzag91@gmail.com
+                  </p>
+                </div>
+                <div class="columns col-gapless col-oneline" style="padding:
+                  2px 0px 4px">
+                  <h6 class="col-3"><b>Address</b></h6>
+                  <p class="col-1">:</p>
+                  <p class="col-7">
+                    20054 N. Pecos Valley Trl.,
+                    Katy-TX 77449
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+    <!-- /Personal Info -->
+    <!-- Special Skills -->
+          <div class="column col-7" style="margin: 0px 0px 0px 15px;">
+            <div style="padding: 0px 0px 0px 10px;
+                        border-radius: 50px 40px 40px 10px;
+                        background: #cc5500">
+              <h5 style="background: #001433;
+                         color: #ffffff;
+                         border-radius: 10px;
+                         padding-left: 20px">
+                  Special Skills / Proficiencies
+              </h5>
+            </div>
+            <blockquote>
+              <div class="columns col-gapless col-oneline">
+                <h6 class="col-5"><b>Linux Distributions</b></h6>
+                <h6 class="col-1">:</h6>
+                <p class="col-7">Arch Linux, Debian, Fedora</p>
+              </div>
+              <div class="columns col-gapless col-oneline">
+                <h6 class="col-5"><b>Languages & Frameworks</b></h6>
+                <h6 class="col-1">:</h6>
+                <p class="col-7">JavaScript - ES.Next, Python, React.js,
+                  Redux.js, Jasmine / Jest</p>
+              </div>
+              <div class="columns col-gapless col-oneline">
+                <h6 class="col-5"><b>Other Technologies</b></h6>
+                <h6 class="col-1">:</h6>
+                <p class="col-7">Babel, Git, NPM, Webpack</p>
+              </div>
+            </blockquote>
+          </div>
+    <!-- /Special Skils -->
+        </div>
+      <!-- Resume -->
+      </div>
+    </div>
+  </body>
+</html>
