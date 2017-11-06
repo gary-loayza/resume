@@ -31,11 +31,14 @@
       p {
         margin: 0px 0px 10px 0px;
       }
+      li {
+        font-size: 11px;
+      }
       ul {
         list-style-type: none;
         margin: 2px 0px 2px 14px;
       }
-      ul > li:before {
+      ul > li::before {
         content: '—';
         position: absolute;
         margin-left: -1.2em;
@@ -46,26 +49,80 @@
         border:.05rem solid #cc6600;
         position: relative;
       }
-      .bracket:before {
+      .bracket::before {
         content: '';
         display: block;
         position: absolute;
-        width: 350px;
+        width: 220px;
         top: -.05rem;
         left: 15px;
-        border:.06rem solid white;
+        border:.05rem solid #fff;
       }
-      .bracket:after {
+      .bracket::after {
         content: '';
         display: block;
         position: absolute;
-        width: 350px;
+        width: 220px;
         bottom: -.05rem;
         left: 15px;
-        border:.06rem solid white;
+        border:.05rem solid #fff;
       }
       .divider {
         border-top: .05rem solid #cc6600;
+      }
+      .timeline .timeline-item .timeline-icon::before {
+        border: .1rem solid #5755d9;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: .8rem;
+        left: .2rem;
+        position: absolute;
+        top: .2rem;
+        width: .8rem;
+      }
+      .timeline .timeline-like-item {
+        display: flex;
+        display: -ms-flexbox;
+        margin-bottom: 1.2rem;
+        position: relative;
+      }
+      .timeline .timeline-like-item::before {
+        background: #fff;
+        content: "";
+        height: 100%;
+        left: 11px;
+        position: absolute;
+        top: 1.2rem;
+        width: 2px;
+      }
+      .timeline .timeline-like-item .timeline-left {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+      }
+      .timeline .timeline-like-item .timeline-content {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 2px 0 2px .8rem;
+      }
+      .timeline .timeline-like-item .timeline-icon {
+        border-radius: 50%;
+        color: #fff;
+        display: block;
+        height: 1.2rem;
+        text-align: center;
+        width: 1.2rem;
+      }
+      .timeline .timeline-like-item .timeline-icon::before {
+        border: .1rem solid #5755d9;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: .8rem;
+        left: .2rem;
+        position: absolute;
+        top: .2rem;
+        width: .8rem;
       }
     </style>
   </head>
@@ -76,24 +133,25 @@
       <!-- Name -->
         <div class="columns col-oneline col-gapless"
              style="margin: 30px">
-          <div class="col-2 pl-2 ml-2">
+          <div class="column col-2">
             <img src="./dist/images/UT.png"
-                height="60" width="60">
+                 class="ml-2 pl-2"
+                 height="60" width="60">
           </div>
-          <h1 class="col-5">Gary Loayza</h1>
+          <h1 class="column col-5">Gary Loayza</h1>
         <!-- Personal Info -->
-          <div class="col-4">
+          <div class="column col-4">
             <div class="columns col-oneline">
-              <h6 class="col-2"><i class="fa fa-phone"></i></h6>
-              <span class="col-4">(281) 610-0421</span>
+              <h6 class="column col-2"><i class="fa fa-phone"></i></h6>
+              <span class="column col-5">(281) 610-0421</span>
             </div>
             <div class="columns col-oneline">
-              <h6 class="col-2"><i class="fa fa-envelope-o"></i></h6>
-              <span class="col-4">loayzag91@gmail.com</span>
+              <h6 class="column col-2"><i class="fa fa-envelope-o"></i></h6>
+              <span class="column col-4">loayzag91@gmail.com</span>
             </div>
             <div class="columns col-oneline">
-              <h6 class="col-2"><i class="fa fa-home"></i></h6>
-              <span class="col-4">Katy, Texas</span>
+              <h6 class="column col-2"><i class="fa fa-home"></i></h6>
+              <span class="column col-4">Katy, Texas</span>
             </div>
           </div>
         <!-- /Personal Info -->
@@ -101,21 +159,24 @@
       <!-- /Name -->
 
       <!-- Summary -->
-        <div class="columns col-12 col-mx-auto">
-          <p align="center">
+        <div class="columns col-mx-auto">
+          <div class="column col-12">
+            <p align="center">
 
-            In the few years after earning my degree I gained proficiency in
-            the administration of GNU/Linux systems. I later learned Javascript
-            and other technologies surrounding the world of front end
-            development in an effort to push my career in the direction of
-            computer science.
+              In the few years after earning my degree I gained proficiency in
+              the administration of GNU/Linux systems. I later learned
+              Javascript and other technologies surrounding the world of front
+              end development in an effort to push my career in the direction
+              of computer science.
 
-          </p>
+            </p>
+          </div>
         </div>
       <!-- /Summary -->
 
+      <div class="columns">
       <!-- Experience -->
-        <div class="col-6"
+        <div class="column col-5"
              style="margin-left: 20px">
         <!-- Work Experience -->
           <h5 style="padding-left: 25px">Work Experience</h5>
@@ -136,18 +197,17 @@
                     <p class="tile-subtitle">
                       A-Beautiful Pools, Inc.
                       <span style="display: block">
-                        <i style="margin-right: 55px">May 2006-Aug 2014</i>
-                        <i style="margin-left: 55px">Katy, Texas</i>
+                        <i style="margin-right: 30px">May 2006-Aug 2014</i>
+                        <i style="margin-left: 30px">Katy, Texas</i>
                       </span>
                     </p>
                     <div class="p-2 bracket">
                       <ul>
                         <li>
 
-                          Revamped training methods by regularly inventing
-                          puzzling scenarios where individuals were divided
-                          into small teams to test their skills and to
-                          habituate problem-solving instincts under pressure.
+                          Revamped traditional training methods by inventing
+                          puzzling scenarios where small teams could habituate
+                          problem-solving instincts under pressure.
 
                         </li>
                       </ul>
@@ -171,8 +231,8 @@
                     <p class="tile-subtitle">
                       Revive Bytes
                       <span style="display: block">
-                        <i style="margin-right: 55px">Jan 2016-Apr 2017</i>
-                        <i style="margin-left: 55px">Katy, Texas</i>
+                        <i style="margin-right: 30px">Jan 2016-Apr 2017</i>
+                        <i style="margin-left: 30px">Katy, Texas</i>
                       </span>
                     </p>
                     <div class="p-2 bracket">
@@ -180,8 +240,7 @@
                         <li>
 
                           Set-up systems and peripherals for Houston based
-                          companies such as Dynegy, FMC Technologies, and even
-                          the Houston corporate office for Chase bank.
+                          companies such as Dynegy and FMC Technologies.
 
                         </li>
                       </ul>
@@ -196,7 +255,7 @@
           <h5 style="padding: 10px 0px 0px 25px">Relevant Experience</h5>
           <div class="divider timeline">
 
-              <div class="timeline-item"
+              <div class="timeline-like-item"
                   style="margin-top:10px"
                   id="rel-exp-1">
                 <div class="timeline-left">
@@ -211,8 +270,8 @@
                       <p class="tile-subtitle">
                         Liftoff Houston Competition
                         <span style="display: block">
-                          <i style="margin-right: 55px">Sept 2016-Nov 2017</i>
-                          <i style="margin-left: 55px">Houston, Texas</i>
+                          <i style="margin-right: 20px">Sept 2016-Nov 2017</i>
+                          <i style="margin-left: 20px">Houston, Texas</i>
                         </span>
                       </p>
                       <div class="p-2 bracket">
@@ -244,6 +303,47 @@
           </div>
         </div>
       <!--/Experience -->
+        <div class="column col-5 col-mx-auto">
+          <h5 style="padding-left: 25px">Education</h5>
+          <div class="divider timeline">
+
+            <div class="timeline-item"
+                 style="margin-top:10px"
+                 id="education">
+              <div class="timeline-left">
+                <a class="timeline-icon"></a>
+              </div>
+              <div class="timeline-content">
+                <div class="tile">
+                  <div class="tile-content">
+                    <h6 class="tile-title pt-2">
+                      <b>B.S. - Physics</b>
+                    </h6>
+                    <p class="tile-subtitle">
+                      University of Texas at Austin
+                      <span style="display: block">
+                        <i style="margin-right: 30px">Aug 2012-May 2015</i>
+                        <i style="margin-left: 30px">Austin, Texas</i>
+                      </span>
+                    </p>
+                    <div class="p-2 bracket">
+                      <ul>
+                        <li>
+
+                          Something about all the data analysis I did in
+                          college.
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       <!-- Resume -->
     </div>
